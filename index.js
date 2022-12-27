@@ -4,9 +4,9 @@ import logger from "morgan";
 import httpServer from "http";
 import Debug from 'debug';
 
-import routes from "./routes/index.js";
-import env from "./config/env.js";
-import connectDB from "./utils/database.js";
+import routes from "./server/routes/index.js";
+import env from "./server/config/env.js";
+import connectDB from "./server/utils/database.js";
 
 const app = express();
 const debug = Debug('utdev:server');
