@@ -5,6 +5,7 @@
     if (params.id) {
       return await authorRepo.getById(params.id);
     }
+    
     return await authorRepo.getAll(params);
   }
 

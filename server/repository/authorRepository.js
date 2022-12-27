@@ -11,7 +11,8 @@ class AuthorRpository {
   async getById(id) {
     return await authorModel.find({_id: id});
   }
-
 }
+
 const authorRepo = new AuthorRpository();
+
 export default authorRepo;
