@@ -2,7 +2,11 @@
  class AuthorService {
     
   getAuthor(params) {
-    return authorRepo.fetchAuthor(params);
+    return authorRepo.getAll(params);
+  }
+
+  async createAuthor(data) {
+    return await authorRepo.create(data);
   }
 }
 
