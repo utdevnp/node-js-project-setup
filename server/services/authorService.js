@@ -1,8 +1,11 @@
  import authorRepo from "../repository/authorRepository.js";
  class AuthorService {
     
-  getAuthor(params) {
-    return authorRepo.getAll(params);
+  async getAuthor(params = {}) {
+    if (params.id) {
+      return await authorRepo.getById(params.id);
+    }
+    return await authorRepo.getAll(params);
   }
 
   async createAuthor(data) {

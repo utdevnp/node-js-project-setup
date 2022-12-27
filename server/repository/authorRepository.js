@@ -1,11 +1,15 @@
 import authorModel from "../models/author.js";
 class AuthorRpository {
-  getAll(params) {
-    return {"name": "Utdev", "email": "utdevnp@gmail.com"};
+  async getAll(params) {
+    return await authorModel.find({});
   }
 
   async create(params) {
     return await authorModel.create(params);
+  }
+
+  async getById(id) {
+    return await authorModel.find({_id: id});
   }
 
 }

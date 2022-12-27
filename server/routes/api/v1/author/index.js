@@ -5,7 +5,7 @@ import { authorSchema } from "../../../../helpers/validation/authorSchema.js";
 
 const router = express.Router();
 
-router.route("/").get(getAuthor);
+router.route("/:id?").get(getAuthor);
 router.route("/").post(validateRequestBody(authorSchema), addAuthor);
 
 export default router;
